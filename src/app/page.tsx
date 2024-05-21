@@ -8,18 +8,20 @@ export default function Home() {
       <div className="h-[797px] w-[351px] rounded-xl p-[17px]  m-auto bg-white">
         <Image alt="omellet" src={omelett} className="rounded-xl"></Image>
         <div className="flex flex-col  m-2 gap-2">
-          <h1 className="text-black font-sans">Simple Omelette Recipe</h1>
+          <h1 className="text-black font-bold text-lg font-sans">
+            Simple Omelette Recipe
+          </h1>
           <p className="text-[#8c8886] text-[7.5px] text-balance font-sans">
             An easy and quick dish. perfect for any meal. This classic omelette
             combines beaten eggs cooked to perfection. optionally filled with
             your choice of cheese. vegetables. or meats.
           </p>
         </div>
-        <div className="bg-[#efe6ed] rounded-md p-2">
-          <h3 className="text-[#7a3f5a] text-sm mb-2 font-bold">
+        <div className="bg-[#fdf1fb] rounded-md p-2 ">
+          <h3 className="text-[#8a4765] text-xs mb-2 font-bold ">
             Preparation time
           </h3>
-          <ul className="list-disc text-[#7a3f5a] flex flex-col gap-2 mx-5 text-[9px]">
+          <ul className="list-disc text-[#934c6c] flex flex-col gap-1 mx-5 text-[7.5px]">
             <li>
               <p className=" text-[#8c8886]">
                 <span className="font-bold">Total:</span> Approximately minutes
@@ -38,8 +40,8 @@ export default function Home() {
           </ul>
         </div>
         <div className="my-3">
-          <h3 className="text-[#714033] text-sm mb-2 font-bold">Ingredients</h3>
-          <ul className="list-disc text-[#714033] flex flex-col gap-2 mx-5 text-[9px]">
+          <h3 className="text-[#a8604d] text-sm mb-2 font-bold">Ingredients</h3>
+          <ul className="list-disc text-[#a8604d] flex flex-col gap-2 mx-5 text-[7px]">
             <li>
               <p className=" text-[#8c8886]">2-3 large eggs</p>
             </li>
@@ -60,10 +62,10 @@ export default function Home() {
           </ul>
 
           <div className="rounded-md p-2">
-            <h3 className="text-[#7a3f5a] text-sm mb-2 font-bold">
+            <h3 className="text-[#a8604d] text-sm mb-2 font-bold">
               Instructions
             </h3>
-            <ul className="list-decimal text-[#7a3f5a] flex flex-col gap-2 mx-5 text-[9px]">
+            <ul className="list-decimal text-[#a8604d]  flex flex-col gap-2 mx-5 text-[7px]">
               <li>
                 <p className=" text-[#8c8886]">
                   <span className="font-bold"> Beat the eggs:</span>In a bowl.
