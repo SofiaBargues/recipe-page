@@ -2,13 +2,21 @@ import Image from "next/image";
 import omelett from "@/images/image-omelette.jpeg";
 import serif from "@/fonts/young-serif";
 
+function SectionTitle({ title }: { title: string }) {
+  return (
+    <h3 className="text-[#804331] text-sm  font-serif font-bold mb-3">
+      {title}
+    </h3>
+  );
+}
+
 export default function Home() {
   return (
     <div className="flex justify-center h-screen w-screen bg-[#f3e5d8]">
-      <div className="h-[797px] w-[351px] rounded-xl p-[17px]  m-auto bg-white">
+      <div className="flex flex-col gap-3  h-[797px] w-[351px] rounded-xl p-[20px]  m-auto bg-white">
         <Image alt="omellet" src={omelett} className="rounded-xl"></Image>
-        <div className="flex flex-col  m-2 gap-2">
-          <h1 className="text-black font-bold text-lg font-sans">
+        <div className="flex flex-col">
+          <h1 className="text-black text-lg  font-serif font-bold">
             Simple Omelette Recipe
           </h1>
           <p className="text-[#8c8886] text-[7.5px] text-balance font-sans">
@@ -17,11 +25,11 @@ export default function Home() {
             your choice of cheese. vegetables. or meats.
           </p>
         </div>
-        <div className="bg-[#fdf1fb] rounded-md p-2 ">
-          <h3 className="text-[#8a4765] text-xs mb-2 font-bold ">
+        <div className="bg-[#fdf1fb] rounded-md p-3">
+          <h3 className="text-[#782b4f] text-[9px] mb-2 font-extrabold ">
             Preparation time
           </h3>
-          <ul className="list-disc text-[#934c6c] flex flex-col gap-1 mx-5 text-[7.5px]">
+          <ul className="list-disc text-[#782b4f] flex flex-col gap-1 mx-5 text-[7.5px]">
             <li>
               <p className=" text-[#8c8886]">
                 <span className="font-bold">Total:</span> Approximately minutes
@@ -39,11 +47,12 @@ export default function Home() {
             </li>
           </ul>
         </div>
-        <div className="my-3">
-          <h3 className="text-[#a8604d] text-sm mb-2 font-bold">Ingredients</h3>
-          <ul className="list-disc text-[#a8604d] flex flex-col gap-2 mx-5 text-[7px]">
+        <div className="my-">
+          <SectionTitle title="Ingredients"></SectionTitle>
+
+          <ul className="list-disc text-[#804331] flex flex-col pl-3 m-1 gap-2  text-[7px] leading-none">
             <li>
-              <p className=" text-[#8c8886]">2-3 large eggs</p>
+              <p className=" text-[#8c8886] ">2-3 large eggs</p>
             </li>
             <li>
               <p className=" text-[#8c8886]">Salt, to taste</p>
@@ -60,57 +69,85 @@ export default function Home() {
               </p>
             </li>
           </ul>
-
-          <div className="rounded-md p-2">
-            <h3 className="text-[#a8604d] text-sm mb-2 font-bold">
-              Instructions
-            </h3>
-            <ul className="list-decimal text-[#a8604d]  flex flex-col gap-2 mx-5 text-[7px]">
-              <li>
-                <p className=" text-[#8c8886]">
-                  <span className="font-bold"> Beat the eggs:</span>In a bowl.
-                  beat the eggs with a pinch of salt and pepper until they ore
-                  well mixed. You can add a tablespoon of water or milk for a
-                  duffer texture.
-                </p>
-              </li>
-              <li>
-                <p className=" text-[#8c8886]">
-                  <span className="font-bold"> Heat the pan:</span> Place a
-                  non-stick frying pan over medium heat and add butter or oil.
-                </p>
-              </li>
-              <li>
-                <p className=" text-[#8c8886]">
-                  <span className="font-bold">Cook the omelette:</span>Once the
-                  butter is melted and bubbling, pour in the eggs. Tilt the pan
-                  to ensure the eggs evenly coat the surface.
-                </p>
-              </li>
-              <li>
-                <p className=" text-[#8c8886]">
-                  <span className="font-bold"> Add fillings (optional):</span>
-                  hen the eggs begin to set at the edges but are still slightly
-                  runny in the middle, sprinkle your chosen fillings over one
-                  half of the omelette.
-                </p>
-              </li>
-              <li>
-                <p className=" text-[#8c8886]">
-                  <span className="font-bold"> Fold and serve:</span>As the
-                  omelette continues to cook. carefully lift one edge and fold
-                  it over the fillings, Let it cook for another minute. then
-                  slide it onto a plate.
-                </p>
-              </li>
-              <li>
-                <p className=" text-[#8c8886]">
-                  <span className="font-bold"> Enjoy:</span> Serve hot. with
-                  additional salt and pepper if needed.
-                </p>
-              </li>
-            </ul>
-          </div>
+        </div>
+        <hr />
+        <div className="">
+          <SectionTitle title="Instructions"></SectionTitle>
+          <ul className="list-decimal m-2 font-bold leading-3 text-[#804331]  flex flex-col text-[7px]">
+            <li>
+              <p className=" text-[#64615f] font-normal pl-1.5">
+                <span className="font-bold "> Beat the eggs:</span>In a bowl.
+                beat the eggs with a pinch of salt and pepper until they ore
+                well mixed. You can add a tablespoon of water or milk for a
+                duffer texture.
+              </p>
+            </li>
+            <li>
+              <p className=" text-[#64615f] font-normal pl-1.5">
+                <span className="font-bold"> Heat the pan:</span> Place a
+                non-stick frying pan over medium heat and add butter or oil.
+              </p>
+            </li>
+            <li>
+              <p className=" text-[#64615f] font-normal pl-1.5">
+                <span className="font-bold">Cook the omelette:</span>Once the
+                butter is melted and bubbling, pour in the eggs. Tilt the pan to
+                ensure the eggs evenly coat the surface.
+              </p>
+            </li>
+            <li>
+              <p className=" text-[#64615f] font-normal pl-1.5">
+                <span className="font-bold"> Add fillings (optional):</span>
+                hen the eggs begin to set at the edges but are still slightly
+                runny in the middle, sprinkle your chosen fillings over one half
+                of the omelette.
+              </p>
+            </li>
+            <li>
+              <p className=" text-[#64615f] font-normal pl-1.5">
+                <span className="font-bold"> Fold and serve:</span>As the
+                omelette continues to cook. carefully lift one edge and fold it
+                over the fillings, Let it cook for another minute. then slide it
+                onto a plate.
+              </p>
+            </li>
+            <li>
+              <p className=" text-[#64615f] font-normal pl-1.5">
+                <span className="font-bold"> Enjoy:</span> Serve hot. with
+                additional salt and pepper if needed.
+              </p>
+            </li>
+          </ul>
+        </div>
+        <hr />
+        <div>
+          <h1 className="text-[#804331] text-sm  font-serif font-bold">
+            Nutrition
+          </h1>
+          <p className="text-[7px] my-2">
+            The table below shows nutritional values per serving without the
+            additional fillings.
+          </p>
+          <table className="table-auto p-2 text-[7px] w-[300px]">
+            <tbody>
+              <tr className="border-b border-b-slate-100 h-4">
+                <td className="pl-3 ">Calories</td>
+                <td className="font-extrabold text-[#804331]">277kcal</td>
+              </tr>
+              <tr className=" h-6 border-b border-b-slate-100 ">
+                <td className="pl-3 ">Carbs</td>
+                <td className="font-extrabold text-[#804331]">0g</td>
+              </tr>
+              <tr className=" h-6 border-b border-b-slate-100 ">
+                <td className="pl-3 ">Protein</td>
+                <td className="font-extrabold text-[#804331]">20g</td>
+              </tr>
+              <tr className=" h-6  border-b-slate-100 ">
+                <td className="pl-3 ">Fat</td>
+                <td className="font-extrabold text-[#804331]">22g</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
