@@ -1,6 +1,6 @@
 import Image from "next/image";
 import omelett from "@/images/image-omelette.jpeg";
-import serif from "@/fonts/young-serif";
+// import serif from "@/fonts/young-serif";
 
 function SectionTitle({ title }: { title: string }) {
   return (
